@@ -9,4 +9,13 @@
     use HasFactory;
 
     public $timestamps = false;
+    protected $fillable = [
+      "img",
+      "status",
+      "title",
+      "content",
+      "type",
+      "start_date",
+      "end_date"
+    ];
   }

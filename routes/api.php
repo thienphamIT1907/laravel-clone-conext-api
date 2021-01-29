@@ -15,12 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-  Route::post('register', 'UserController@register');
-  Route::post('login', 'UserController@login');
-
-  Route::middleware('auth:api')->group( function () {
-    Route::resource('user', UserController::class);
-  });
+//  Route::post('register', 'UserController@register');
+//  Route::post('login', 'UserController@login');
+//
+//  Route::middleware('auth:api')->group( function () {
+//    Route::resource('user', UserController::class);
+//  });
 
 Route::apiResource('business-type', 'BusinessTypeController');
 
@@ -34,7 +34,7 @@ Route::apiResource('voucher', 'VoucherController');
 
 Route::apiResource('workplace', 'WorkplaceController');
 
-//Route::apiResource('user', 'UserController');
+Route::apiResource('user', 'UserController');
 
 
 

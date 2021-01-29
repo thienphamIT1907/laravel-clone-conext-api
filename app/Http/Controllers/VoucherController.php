@@ -15,10 +15,8 @@
     public function __construct(VoucherRepositoryImpl $repository) { $this -> repository = $repository; }
 
     public function index(Request $request): JsonResponse {
-      if ($request -> query('type') === 'featured') {
-        return response() -> json($this -> repository -> getByOption('featured'), 200);
-      }
-      return response() -> json($this -> repository -> getByOption('get'), 200);
+      $options = $request -> query('type');
+      return response() -> json($this -> repository -> getByOption($options), 200);
     }
 
     public function create() { }

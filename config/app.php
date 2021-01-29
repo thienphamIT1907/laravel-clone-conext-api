@@ -162,6 +162,7 @@
       Illuminate\Validation\ValidationServiceProvider::class,
       Illuminate\View\ViewServiceProvider::class,
       Laravel\Passport\PassportServiceProvider::class,
+      L5Swagger\L5SwaggerServiceProvider::class,
 
       /*
        * Package Service Providers...

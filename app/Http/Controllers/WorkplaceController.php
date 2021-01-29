@@ -16,8 +16,6 @@
     public function index(Request $request): JsonResponse {
       if ($request -> query('get') === 'location') {
         return response() -> json($this -> repository -> getLocation(), 200);
-      } else {
-
       }
       return response() -> json($this -> repository -> getAll(), 200);
     }
